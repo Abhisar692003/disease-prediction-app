@@ -1,3 +1,11 @@
+import subprocess
+import sys
+
+def install_req():
+    req_file = "requirements.txt"
+    if os.path.exists(req_file):
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", req_file])
+
 import streamlit as st
 
 import numpy as np
